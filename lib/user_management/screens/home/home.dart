@@ -4,6 +4,8 @@ import 'package:urbun_guide/user_management/screens/home/profile.dart';
 
 import 'package:urbun_guide/user_management/services/auth.dart';
 
+import 'package:urbun_guide/pages/tourist_home.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -80,6 +82,16 @@ class _HomeState extends State<Home> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => BusPage()),
+                    );
+                  },
+                  child: const Text("Public transpotation"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Navigate to the Profile page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TouristHome()),
                     );
                   },
                   child: const Text("Public transpotation"),
