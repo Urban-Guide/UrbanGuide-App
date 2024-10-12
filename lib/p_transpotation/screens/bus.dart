@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:urbun_guide/p_transpotation/screens/BusDetailsPage.dart';
 import 'package:urbun_guide/p_transpotation/screens/TrainDetails.dart';
 import 'package:urbun_guide/user_management/screens/home/home.dart';
+import 'package:urbun_guide/p_transpotation/screens/bus.dart';
 
 class BusPage extends StatefulWidget {
   @override

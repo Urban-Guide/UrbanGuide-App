@@ -11,7 +11,10 @@ class TouristHome extends StatefulWidget {
 
 class _TouristHomeState extends State<TouristHome> {
   String selectedCity = "Galle, LK"; // Default city
-  final List<String> cities = ["Galle, LK", "Colombo, LK"]; // Add more cities as needed
+  final List<String> cities = [
+    "Galle, LK",
+    "Colombo, LK"
+  ]; // Add more cities as needed
   final TextEditingController searchController = TextEditingController();
   String searchQuery = "";
 
@@ -54,8 +57,10 @@ class _TouristHomeState extends State<TouristHome> {
                         ),
                       );
                     }).toList(),
-                    dropdownColor: const Color(0xff1E2A5E), // Dropdown color matching app bar
-                    icon: const Icon(Icons.arrow_drop_down, color: Colors.white),
+                    dropdownColor: const Color(
+                        0xff1E2A5E), // Dropdown color matching app bar
+                    icon:
+                        const Icon(Icons.arrow_drop_down, color: Colors.white),
                     underline: Container(), // Removes underline
                   ),
                 ),
@@ -65,10 +70,12 @@ class _TouristHomeState extends State<TouristHome> {
                   // Navigate to the Profile Page
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ProfilePage()),
+                    MaterialPageRoute(
+                        builder: (context) => const ProfilePage()),
                   );
                 },
-                child: const Icon(Icons.person_outlined, color: Colors.white, size: 35.0),
+                child: const Icon(Icons.person_outlined,
+                    color: Colors.white, size: 35.0),
               ),
             ],
           ),
@@ -119,7 +126,8 @@ class _TouristHomeState extends State<TouristHome> {
                   AllTab(city: selectedCity),
                   NatureTab(city: selectedCity, searchQuery: searchQuery),
                   HistoricalTab(city: selectedCity, searchQuery: searchQuery),
-                  EntertainmentTab(city: selectedCity, searchQuery: searchQuery),
+                  EntertainmentTab(
+                      city: selectedCity, searchQuery: searchQuery),
                 ],
               ),
             ),
