@@ -42,6 +42,7 @@ dependencies:
   provider: ^6.1.2
   firebase_storage: ^12.3.3
   url_launcher: ^6.3.1
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,21 @@ flutter:
    - assets/images/google.png
    - assets/images/man.png
    - assets/images/logo.png
+   - assets/images/acco2.jpg
+   - assets/images/acco1.jpg
+   - assets/images/acco3.jpg
+   - assets/images/acco4.jpg
+   - assets/images/acco5.jpg
+   - assets/images/acco6.jpg
+   - assets/images/acco7.jpg
+   - assets/images/acco8.jpg
+   - assets/images/acco9.jpg
+   - assets/images/acco10.jpg
+   - assets/images/acco11.jpg
+   - assets/images/acco12.jpg
+   - assets/images/acco13.jpg
+   - assets/images/acco14.jpg
+   - assets/images/acco15.jpg
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

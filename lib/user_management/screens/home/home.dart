@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:urbun_guide/p_transpotation/screens/bus.dart';
+import 'package:urbun_guide/pages/accommodation_dashboard.dart';
 import 'package:urbun_guide/user_management/screens/home/profile.dart';
 
 import 'package:urbun_guide/user_management/services/auth.dart';
@@ -83,6 +84,16 @@ class _HomeState extends State<Home> {
                     );
                   },
                   child: const Text("Public transpotation"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => AccommodationsPage()),
+                    );
+                  },
+                  child: const Text("Budget Accommodations"),
                 ),
               ],
             ),
