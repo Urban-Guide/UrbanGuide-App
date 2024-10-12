@@ -14,8 +14,25 @@ class TrainDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue[900],
-        title: Text('Train Route Number $trainNumber'),
+        backgroundColor: const Color(0xff1E2A5E),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(30.0),
+            bottomRight: Radius.circular(30.0),
+          ),
+        ),
+        toolbarHeight: 70.0,
+        title: const Padding(
+          padding: EdgeInsets.only(bottom: 20.0, top: 20.0),
+          child: Text(
+            "Colombo",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -36,11 +53,11 @@ class TrainDetailsPage extends StatelessWidget {
             }
 
             // Since routeNumber is unique, assume we only have one document.
-            var busDoc = snapshot.data!.docs.first;
-            var busData = busDoc.data() as Map<String, dynamic>;
+            var trainDoc = snapshot.data!.docs.first;
+            var tarinData = trainDoc.data() as Map<String, dynamic>;
             String destination =
-                busData['destination'] ?? 'Unknown destination';
-            String frequency = busData['distance'] ?? 'Unknown frequency';
+                tarinData['destination'] ?? 'Unknown destination';
+            String frequency = tarinData['distance'] ?? 'Unknown frequency';
 
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -97,7 +114,7 @@ class TrainDetailsPage extends StatelessWidget {
                 FutureBuilder<QuerySnapshot>(
                   future: FirebaseFirestore.instance
                       .collection('train')
-                      .doc(busDoc.id) // Use the document ID
+                      .doc(trainDoc.id) // Use the document ID
                       .collection(
                           'timetable') // Fetch the timetable sub-collection
                       .get(),
@@ -208,7 +225,7 @@ class TrainDetailsPage extends StatelessWidget {
                 FutureBuilder<QuerySnapshot>(
                   future: FirebaseFirestore.instance
                       .collection('train')
-                      .doc(busDoc.id) // Use the document ID
+                      .doc(trainDoc.id) // Use the document ID
                       .collection('stop') // Fetch the 'stop' sub-collection
                       .get(),
                   builder: (context, busstopSnapshot) {

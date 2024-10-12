@@ -14,8 +14,25 @@ class BusDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue[900],
-        title: Text(' Bus Route Number $routeNumber'),
+        backgroundColor: const Color(0xff1E2A5E),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(30.0),
+            bottomRight: Radius.circular(30.0),
+          ),
+        ),
+        toolbarHeight: 70.0,
+        title: const Padding(
+          padding: EdgeInsets.only(bottom: 20.0, top: 20.0),
+          child: Text(
+            "Colombo",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),

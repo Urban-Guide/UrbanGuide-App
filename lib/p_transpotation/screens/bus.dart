@@ -51,9 +51,26 @@ class _BusPageState extends State<BusPage> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue[900],
+        backgroundColor: const Color(0xff1E2A5E),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(30.0),
+            bottomRight: Radius.circular(30.0),
+          ),
+        ),
         leading: Icon(Icons.location_on),
-        title: Text('Colombo, LK'),
+        toolbarHeight: 70.0,
+        title: const Padding(
+          padding: EdgeInsets.only(bottom: 20.0, top: 20.0),
+          child: Text(
+            "Colombo",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
